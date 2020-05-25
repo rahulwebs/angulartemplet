@@ -1,0 +1,295 @@
+            /* You can add global styles to this file, and also import other style files */
+            
+            @import "bourbon";
+            @import "assets/scss/mixins.scss";
+            @import "assets/scss/variables.scss";
+            @import "assets/scss/common.scss";
+            // font family
+            @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+            body {
+                font-family: 'Open Sans', sans-serif;
+                @include margin(0)
+            }
+            
+            section.section {
+                background: transparent;
+            }
+            
+            .slideshow {
+                box-shadow: 0px 0px 40px rgba(0, 0, 0, .3);
+                .slide img {
+                    max-width: 100%;
+                    width: 100%;
+                    position: relative;
+                }
+                .slick-prev:before,
+                .slick-next:before {
+                    color: black;
+                }
+            }
+            
+            .slider {
+                .slick-dots {
+                    display: flex;
+                    justify-content: center;
+                    list-style-type: none;
+                    @include position(absolute,
+                    null 44% 73px null);
+                    @include transform(translateX(-44%));
+                    @media #{$mq-max-small} {
+                        @include position(absolute,
+                        null 44% 50px null);
+                    }
+                    li {
+                        margin: 0 0.25rem;
+                        button {
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            padding: 0;
+                            cursor: pointer;
+                            border: none;
+                            border-radius: 10px;
+                            background-color: #ffffff;
+                            text-indent: -9999px;
+                            &:focus {
+                                outline: 0;
+                            }
+                        }
+                        &.slick-active {
+                            button {
+                                background-color: #ff3d55;
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+                .first {
+                    @include position(absolute,
+                    23% null null 12%);
+                    text-align: center;
+                    @media #{$mq-max-small} {
+                        @include position(absolute,
+                        50% null null 50%);
+                        text-align: center;
+                        @include transform(translate(-50%, -50%));
+                    }
+                    .title_first {
+                        font-size: 43px;
+                        color: #ff3d55;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-family: 'Open Sans', sans-serif;
+                        @media #{$mq-max-small} {
+                            font-size: 54px;
+                        }
+                    }
+                    .title_second {
+                        z-index: 6;
+                        white-space: nowrap;
+                        font-size: 125px;
+                        line-height: 135px;
+                        font-weight: 400;
+                        color: rgb(1, 37, 70);
+                        letter-spacing: 0px;
+                        font-family: 'Playball', cursive;
+                        @media #{$mq-max-small} {
+                            font-size: 78px;
+                            line-height: 33px;
+                        }
+                    }
+                    .title_third {
+                        z-index: 10;
+                        font-size: 120px;
+                        line-height: 130px;
+                        font-weight: 700;
+                        color: rgb(255, 255, 255);
+                        letter-spacing: 0px;
+                        font-family: 'Open Sans', sans-serif;
+                        text-transform: uppercase;
+                        position: relative;
+                        display: inline-block;
+                        @media #{$mq-max-small} {
+                            font-size: 91px;
+                        }
+                        &::after {
+                            content: '';
+                            @include position(absolute,
+                            null 0 10px null);
+                            width: 100%;
+                            height: 31px;
+                            background-color: #ff3d55;
+                            z-index: -4;
+                        }
+                    }
+                    .title_fourth {
+                        font-size: 50px;
+                        line-height: 40px;
+                        font-weight: 700;
+                        color: rgb(1, 37, 70);
+                        letter-spacing: 0px;
+                        font-family: 'Open Sans', sans-serif;
+                        text-transform: uppercase;
+                    }
+                }
+                .second {
+                    @include position(absolute,
+                    35% null null 15%);
+                    @media #{$mq-max-small} {
+                        transform: translate(-50%, -50%);
+                        @include position(absolute,
+                        50% null null 50%);
+                        @media #{$mq-max-small} {
+                            transform: translate(-50%, -50%);
+                            @include position(absolute,
+                            41% null null 39%);
+                        }
+                    }
+                    .title_first {
+                        font-size: 20px;
+                        color: rgb(1, 37, 70);
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-family: 'Playball', cursive;
+                        @media #{$mq-max-small} {
+                            font-size: 19px;
+                        }
+                    }
+                    .title_second {
+                        display: inline-block;
+                        line-height: 100px;
+                        border-width: 0px;
+                        margin: 0px;
+                        padding: 0px;
+                        letter-spacing: 0px;
+                        font-weight: 800;
+                        font-size: 70px;
+                        color: #ff3d55;
+                        @media #{$mq-max-small} {
+                            font-size: 30px;
+                            line-height: 45px;
+                        }
+                    }
+                    .title_third {
+                        display: inline-block;
+                        padding-left: 10px!important;
+                        line-height: 50px;
+                        border-width: 0px;
+                        margin: 0px;
+                        padding: 0px;
+                        letter-spacing: 0px;
+                        font-weight: 800;
+                        font-size: 70px;
+                        color: rgb(1, 37, 70);
+                        @media #{$mq-max-small} {
+                            font-size: 30px;
+                            line-height: 45px;
+                        }
+                    }
+                    .title_fourth {
+                        font-size: 37px;
+                        line-height: 23px;
+                        font-weight: 400;
+                        color: rgb(40, 61, 88);
+                        letter-spacing: 0px;
+                        font-family: "Open Sans";
+                        @media #{$mq-max-small} {
+                            font-size: 25px;
+                            line-height: 32px;
+                        }
+                    }
+                }
+                .right_img {
+                    @include position(absolute,
+                    24% 14% null null);
+                    @include transform(translateY(-24%, -14%));
+                    @media #{$mq-max-small} {
+                        @include position(absolute,
+                        55% 14% null null);
+                        img {
+                            width: 200px;
+                        }
+                    }
+                    .offer_img_png {
+                        @include position(absolute,
+                        -30px null null null);
+                        @media #{$mq-max-small} {
+                            width: 120px;
+                        }
+                    }
+                }
+                .slick-active {
+                    .right_img {
+                        -webkit-animation: slide-top_banner 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        animation: slide-top_banner 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        .offer_img_png {
+                            -webkit-animation: slide-top_banner 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                            animation: slide-top_banner 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        }
+                    }
+                }
+                .slick-active {
+                    .first {
+                        .title_third {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                -webkit-animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                                animation: slide-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                            }
+                        }
+                    }
+                }
+                .btn-danger {
+                    @include padding(12px 31px);
+                    font-size: 20px;
+                    @media #{$mq-max-small} {
+                        @include padding(8px 13px);
+                        font-size: 13px;
+                    }
+                }
+            }
+            
+            // clientsfeedback_text ================= start
+            .clientsfeedback_text {
+                .slick-dots {
+                    list-style-type: none;
+                    li {
+                        margin: 0 0.25rem;
+                        button {
+                            display: none;
+                            &:focus {
+                                outline: 0;
+                            }
+                        }
+                        &.slick-active {}
+                    }
+                }
+                .slick-custom-arrow {
+                    .fa-angle-left {
+                        @include position(absolute,
+                        30% null null -19px);
+                        font-size: 37px;
+                        color: wheat;
+                    }
+                    .fa-angle-right {
+                        @include position(absolute,
+                        30% -19px null null);
+                        font-size: 37px;
+                        color: wheat;
+                    }
+                }
+            }
+            
+            .slick-current {
+                &.slick-active {
+                    .slide-img {
+                        img {
+                            width: 86px;
+                            border-radius: 50%;
+                            margin: 0 auto;
+                            opacity: 1!important;
+                        }
+                    }
+                }
+            }

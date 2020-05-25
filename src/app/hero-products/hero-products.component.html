@@ -1,0 +1,49 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 px-0 section_title">
+                <div class="text-center col-md-6 mx-auto pb-4">
+                    <h4 class="first_title">SEE OUR BEST</h4>
+                    <h4 class="second_title">Featured Products</h4>
+                    <p>As the premier event planning company in the area. Each event and client is unique and we believe our services should be as well.</p>
+                </div>
+            </div>
+            <!-- title close -->
+            <div class="col-md-3 products pb-2" *ngFor="let product of  hero_products">
+                <div class="card">
+                    <div class="overflow-hidden position-relative">
+                        <img class="card-img-top scale" src="{{product.img}}" alt="Card image cap">
+                        <div class="row cart-bg no-gutters py-2 ">
+                            <div class="col-6 pl-2">
+                                <a href="#" class="cart_color"><span><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></span> ADD TO CART</a>
+                            </div>
+                            <div class="col-6 text-right pr-3">
+                                <a href="#" class="cart_color"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <span class="pl-3 cart_color"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body px-0  text-center  border-top py-1">
+                        <div class="card_body position-relative">
+                            <div class="pro_data text-center">
+                                <a href="#" class="pro_name pb-2">
+                                    {{product.pro_name}} 
+                                </a>
+                                <div class="reting_icon">
+                                    <a href="#"><span class="{{product.class1}} px-1"></span></a>
+                                    <a href="#"><span class="{{product.class2}} px-1"></span></a>
+                                    <a href="#"><span class="{{product.class3}} px-1"></span></a>
+                                    <a href="#"><span class="{{product.class4}} px-1"></span></a>
+                                    <a href="#"><span class="{{product.class5}} px-1"></span></a>
+                                </div>
+                                <a href="#" class="pro-price">
+                                    {{product.pro_price}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

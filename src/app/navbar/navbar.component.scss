@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "bourbon";
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/common.scss";
+::placeholder {
+    color: white;
+}
+
+.navbar {
+    background-color: #0e3559;
+    .navbar-brand {
+        img {
+            width: 120px;
+        }
+    }
+    .navbar-nav {
+        .nav-item {
+            @include padding(null 10px);
+            .nav-link {
+                color: #fff;
+                @include padding(null 0);
+                display: inline-block;
+                position: relative;
+                font-weight: 650;
+                &:after {
+                    content: '';
+                    background-color: #ff3d55;
+                    width: 0;
+                    height: 2px;
+                    transition: all 0.5s ease;
+                    @include position(absolute, null null 0 0);
+                }
+                &:hover {
+                    &:after {
+                        width: 100%;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .line_nav {
+        position: relative;
+        &:before {
+            content: "";
+            left: -25px;
+            background-color: red;
+            width: 2px;
+            height: 80%;
+            position: absolute;
+        }
+        .searchBox {
+            border-radius: 13px;
+            &:hover {
+                &>.searchInput {
+                    width: 240px;
+                    border-bottom: 1px solid #ff3d55;
+                    border-radius: 10px;
+                    padding-left: 10px;
+                    color: $white;
+                }
+                &>.searchButton {
+                    background: white;
+                    color: #ff3d55;
+                }
+            }
+            .searchInput {
+                border: none;
+                background: none;
+                outline: none;
+                float: left;
+                padding: 0;
+                color: white;
+                font-size: 16px;
+                transition: 0.4s;
+                width: 0px;
+                background-color: #ff3d55;
+                line-height: 27px;
+            }
+            .searchButton {
+                color: white;
+                float: right;
+                width: 27px;
+                height: 27px;
+                border: none;
+                background: #2f3640;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.4s;
+                position: absolute;
+                background-color: #ff3d55;
+                border-radius: 3px;
+                right: 30px;
+                &:hover {
+                    background: #ff3d55;
+                }
+            }
+        }
+        .cart_bg {
+            background-color: #08233a;
+            padding: 5px;
+            border-radius: 3px;
+            position: relative;
+            .cart-caount {
+                position: absolute;
+                top: -15px;
+                right: -4px;
+                font-size: 10px;
+                width: 15px;
+                height: 15px;
+                background: #ff3d55;
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+            }
+        }
+    }
+}

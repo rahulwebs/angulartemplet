@@ -1,0 +1,21 @@
+<div class="row slider">
+    <ngx-slick-carousel class="carousel container-fluid px-0" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of banner_slides" class="slide position-relative" style="background-image: url({{ slide.bg_img }}   );">
+            <!-- <img src="{{ slide.bg_img }}" width="100%"> -->
+            <div class="{{ slide.class }} tex-center">
+                <h3 class="title_first">{{ slide.caption1 }}</h3>
+                <h3 class="title_second">{{ slide.caption2 }}</h3>
+                <h3 class="title_third">{{ slide.caption3 }}</h3>
+                <h3 class="title_fourth">{{slide.caption4}}</h3>
+                <div class="pt-3">
+                    <button class="btn btn-danger">{{slide.button}} <span class="{{slide.class_icon}}"></span></button>
+                </div>
+            </div>
+            <div class="{{slide.right_img}}">
+                <img src="{{slide.img}}">
+                <img class="offer_img_png" src="{{slide.offer_img}}">
+            </div>
+
+        </div>
+    </ngx-slick-carousel>
+</div>

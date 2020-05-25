@@ -1,0 +1,29 @@
+$red: #ff3d55;
+@import "bourbon";
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/common.scss";
+.blog {
+    .blog_img {
+        img {
+            @include size(100%, 229px);
+            object-fit: cover;
+        }
+    }
+    .blog-time {
+        .date {
+            z-index: 2;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 26px;
+        }
+        .month {
+            color: $red;
+            @extend %blog_title;
+        }
+    }
+    .blog_tile {
+        @extend %blog_title;
+    }
+}
