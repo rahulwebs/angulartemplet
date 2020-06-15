@@ -1,0 +1,38 @@
+.goodcomments {
+    background-color: #0e385e;
+    background-color: #0e385e;
+    transform: translateY(-48px);
+    z-index: z;
+    z-index: -10;
+    position: relative;
+    .icon {
+        i {
+            color: white;
+            font-size: 50px;
+        }
+    }
+    .number {
+        color: white;
+        font-size: 44px;
+        font-family: "Playball", Arial, Helvetica, sans-serif;
+        padding-top: 10px;
+        display: inline-block;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            bottom: -4px;
+            left: 50%;
+            background-color: white;
+            transform: translate(-50%);
+        }
+    }
+    .title {
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        padding-top: 3px;
+    }
+}

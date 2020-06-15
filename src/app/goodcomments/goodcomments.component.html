@@ -1,0 +1,13 @@
+<section class="goodcomments py-5">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-3 text-center pt-md-5 pb-4" *ngFor="let goodcomments of  countup">
+                <div class="icon">
+                    <i class="{{goodcomments.icon}} "></i>
+                </div>
+                <h3 class="number">{{goodcomments.counter_n}}</h3>
+                <h3 class="title">{{goodcomments.title}}</h3>
+            </div>
+        </div>
+    </div>
+</section>

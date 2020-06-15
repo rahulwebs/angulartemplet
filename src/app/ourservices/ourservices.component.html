@@ -1,0 +1,57 @@
+<section class="pt-5">
+    <div class="container-fluid px-md-0  service">
+        <div class="row">
+            <div class="col-md-4 d-flex">
+                <div class="">
+                    <img class="left_img h-100 d-md-block d-none" src="assets/images/about/col-bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-8 pl-0  pr-0 z-inex-1">
+                <div class="left_section">
+                    <div class="row pl-custom">
+                        <div class="col-md-12 px-0 section_title">
+                            <div class=" col-md-10 pb-4 ">
+                                <h4 class="first_title ">WHAT WE OFFER</h4>
+                                <h4 class="second_title text-white">Our Great Services</h4>
+                                <p class="third_title">As the premier event planning company in the area. Each event and client is unique and we believe our services should be as well.</p>
+                            </div>
+                        </div>
+                        <!-- title close -->
+                        <div *ngFor="let service of our_service">
+                            <div class="row no-gutters">
+                                <div class="icon_size col-2">
+                                    <img src="{{service.icon_img}}">
+                                </div>
+                                <div class="text-title col-9 our_service_right pb-5">
+                                    <h4 class="title_fitst">{{service.title_h}}</h4>
+                                    <p class="tittle_second ">{{service.title_p}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="date_and_time pb-5">
+                            <div class="row" id="demo">
+                                <div class="time_size-bg">
+                                    <span class="number_size" id="mydays"></span>
+                                    <p class="text-size">Days</p>
+                                </div>
+                                <div class="time_size-bg">
+                                    <span class="number_size" id="myhours"></span>
+                                    <p class="text-size">Hours</p>
+                                </div>
+                                <div class="time_size-bg">
+                                    <span class="number_size" id="myminutes"></span>
+                                    <p class="text-size">Minutes</p>
+                                </div>
+                                <div class="time_size-bg">
+                                    <span class="number_size" id="myseconds"></span>
+                                    <p class="text-size">Seconds</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

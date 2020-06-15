@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+ 
+
+
 @Component({
   selector: 'app-hero-clientsfeedback',
   templateUrl: './hero-clientsfeedback.component.html',
@@ -7,19 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroClientsfeedbackComponent implements OnInit {
 
-  clientsfeedback_slider = [            
-
-    
-    {clientfeedback: "I would recommend her for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!",slide_img:"assets/images/testiamonial/img1.jpg"},
-
-    {clientfeedback: "rahul er for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!",slide_img:"assets/images/testiamonial/img2.jpg"},
-
-    {clientfeedback: "I would recommend her for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!",slide_img:"assets/images/testiamonial/img3.jpg"},   
-    
-    {clientfeedback: "rahul er for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!",slide_img:"assets/images/testiamonial/img2.jpg"},
-
-    {clientfeedback: "rahul er for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!",slide_img:"assets/images/testiamonial/img2.jpg"},
+  private _clientsfeedback_slider = [
+    { clientfeedback: "I would recommend her for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!", slide_img: "assets/images/testiamonial/img1.jpg" },
+    { clientfeedback: "rahul er for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!", slide_img: "assets/images/testiamonial/img2.jpg" },
+    { clientfeedback: "I would recommend her for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!", slide_img: "assets/images/testiamonial/img3.jpg" },
+    { clientfeedback: "rahul er for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!", slide_img: "assets/images/testiamonial/img2.jpg" },
+    { clientfeedback: "rahul er for any event weddings, anniversary party, baby shower, birthday parties and more THANK YOU!!!!!!!!!!!!!", slide_img: "assets/images/testiamonial/img2.jpg" },
   ]; 
+  public get clientsfeedback_slider() {
+    return this._clientsfeedback_slider;
+  }
+  public set clientsfeedback_slider(value) {
+    this._clientsfeedback_slider = value;
+  }
 
 
    

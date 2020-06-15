@@ -1,0 +1,23 @@
+@import "bourbon";
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/common.scss";
+.team {
+    .overflow-hidden {
+        img {
+            transition: 0.3s ease-in;
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.3s ease-in;
+                filter: grayscale(90%);
+            }
+        }
+        .teams_text {
+            position: absolute;
+            bottom: 10%;
+            width: 90%;
+            background-color: white;
+            @include padding(10px 15px 10px 10px);
+        }
+    }
+}

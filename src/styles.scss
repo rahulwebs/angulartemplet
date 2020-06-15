@@ -293,3 +293,16 @@
                     }
                 }
             }
+            
+            // about css start 
+            .inner_bg {
+                background-size: cover;
+                height: 90vh;
+                background-repeat: no-repeat;
+                background-position: center;
+                .text-banner {
+                    @include position(absolute,
+                    50% null null 50%);
+                    transform: translate(-50%, -50%);
+                }
+            }

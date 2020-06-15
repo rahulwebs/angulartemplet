@@ -1,0 +1,53 @@
+.about {
+    .nav-tabs {
+        border-bottom: none!important;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 93%;
+            height: 25px;
+            right: 11px;
+            left: 23px;
+            top: 26%;
+            border: 1px solid lightgray;
+        }
+        .nav-item {
+            .nav-link {
+                color: #495057;
+                background-color: #fff;
+                border: 1px solid lightgray;
+                padding: 20px 10px;
+                border-radius: 0!important;
+                font-size: 21px;
+                &.active {
+                    background-color: #ff3d55;
+                    color: white;
+                }
+            }
+        }
+    }
+    .about-title {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 30px;
+        color: #828c96;
+    }
+    .list_size {
+        .icon_list {
+            color: #ff3d55;
+            font-size: 19px;
+        }
+        .title {
+            font-size: 19px;
+            font-weight: 400;
+            color: #2e3a46;
+        }
+    }
+    .about-btn {
+        .btn_cusotm {
+            background-color: #ff3d55!important;
+            padding: 10px 28px;
+            color: white;
+        }
+    }
+}

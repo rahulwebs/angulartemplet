@@ -1,0 +1,22 @@
+<section>
+    <div class="container team py-5">
+        <div class="row">
+            <div class="col-md-12 px-0 section_title">
+                <div class="text-center col-md-6 mx-auto pb-4">
+                    <h4 class="first_title">SEE OUR BEST</h4>
+                    <h4 class="second_title">Planner Latest Team</h4>
+                    <p>As the premier event planning company in the area. Each event and client is unique and we believe our services should be as well.</p>
+                </div>
+            </div>
+            <div class="col-md-4 pb-3" *ngFor="let team of  our_team">
+                <div class="overflow-hidden position-relative">
+                    <img src="{{team.img}}" alt="teams_img">
+                    <div class="teams_text">
+                        <h4>{{team.employee_name}}</h4>
+                        <p>{{team.emloyee_position}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
